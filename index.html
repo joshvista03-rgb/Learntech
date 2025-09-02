@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LearnTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login" class="login-screen">
+    <div class="login-box">
+      <h1>LearnTech</h1>
+      <p class="muted">Log in to access your learning space.</p>
+
+      <label for="username">Username</label>
+      <input id="username" type="text" autocomplete="username" placeholder="e.g., admin" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" placeholder="e.g., 1234" />
+
+      <button id="loginBtn">Login</button>
+      <p id="loginError" class="error"></p>
+
+      <details class="hint">
+        <summary>Show demo credentials</summary>
+        <code>Username: admin</code><br />
+        <code>Password: 1234</code>
+      </details>
+    </div>
+  </div>
+
+  <!-- App -->
+  <div id="app" class="app hidden">
+    <header class="site-header">
+      <div class="brand">
+        <span class="logo">LT</span>
+        <h2>LearnTech</h2>
+      </div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#progress">Progress</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contact">Contact</a>
+        <button id="logoutBtn" class="outline">Logout</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <h1>Engage. Learn. Achieve.</h1>
+        <p>Your interactive platform for smarter learning.</p>
+        <a href="#features" class="cta">Explore Features</a>
+      </section>
+
+      <section class="cards" id="features">
+        <article class="card">
+          <h3>Interactive Lessons</h3>
+          <p>Engage with activities and materials designed for focus and fun.</p>
+        </article>
+        <article class="card">
+          <h3>Progress Tracking</h3>
+          <p>See your learning journey at a glance with visual progress.</p>
+        </article>
+        <article class="card">
+          <h3>Rewards System</h3>
+          <p>Earn points and badges as you complete tasks and quizzes.</p>
+        </article>
+      </section>
+
+      <section class="progress" id="progress">
+        <h2>Your Progress</h2>
+        <div class="progress-bar" aria-label="Course progress">
+          <div id="progressFill" class="progress-fill" style="width:0%"></div>
+        </div>
+        <button id="completeLessonBtn">Complete Lesson (+20%)</button>
+      </section>
+
+      <section class="rewards" id="rewards">
+        <h2>Your Rewards</h2>
+        <p id="rewardPoints" class="points">Points: 0</p>
+        <button id="earnPointsBtn">Earn Points (+10)</button>
+      </section>
+
+      <section class="quiz" id="quiz">
+        <h2>Quick Quiz</h2>
+        <p>What does HTML stand for?</p>
+        <div class="choices">
+          <button class="choice" data-choice="a">a) Hyper Text Markup Language</button>
+          <button class="choice" data-choice="b">b) Home Tool Markup Language</button>
+          <button class="choice" data-choice="c">c) Hyperlinks and Text Management Language</button>
+        </div>
+        <p id="quizResult" class="quiz-result"></p>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <p>Contact us: <a href="mailto:learntech@email.com">learntech@email.com</a></p>
+      <p>© 2025 LearnTech. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
